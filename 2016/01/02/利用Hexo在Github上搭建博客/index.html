@@ -1,0 +1,775 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/ycyy_favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="元旦假期终于可以静下来休息一下了，回忆过去的一年里，除了年龄的增长我还有什么收获？一时间竟然毫无头绪。">
+<meta name="keywords" content="Hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="利用Hexo在Github上搭建博客">
+<meta property="og:url" content="http://ycyy.me/2016/01/02/利用Hexo在Github上搭建博客/index.html">
+<meta property="og:site_name" content="浥尘烟雨">
+<meta property="og:description" content="元旦假期终于可以静下来休息一下了，回忆过去的一年里，除了年龄的增长我还有什么收获？一时间竟然毫无头绪。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/696a9cabgw1ezl8cp6c7tj21e00ukaey.jpg">
+<meta property="og:updated_time" content="2017-12-25T13:09:02.064Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="利用Hexo在Github上搭建博客">
+<meta name="twitter:description" content="元旦假期终于可以静下来休息一下了，回忆过去的一年里，除了年龄的增长我还有什么收获？一时间竟然毫无头绪。">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/696a9cabgw1ezl8cp6c7tj21e00ukaey.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"right","display":"hide"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://ycyy.me/2016/01/02/利用Hexo在Github上搭建博客/"/>
+
+
+
+
+
+  <title> 利用Hexo在Github上搭建博客 | 浥尘烟雨 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">浥尘烟雨</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <p class="site-subtitle"></p>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://ycyy.me/2016/01/02/利用Hexo在Github上搭建博客/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="浥尘烟雨">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.gif">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="浥尘烟雨">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="浥尘烟雨" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                利用Hexo在Github上搭建博客
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-01-02T00:00:00+08:00">
+                2016-01-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+              <div class="post-description">
+                  元旦假期终于可以静下来休息一下了，回忆过去的一年里，除了年龄的增长我还有什么收获？一时间竟然毫无头绪。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>元旦假期终于可以静下来休息一下了，回忆过去的一年里，除了年龄的增长我还有什么收获？一时间竟然毫无头绪。人生阅历的积累并不是简单的叠加，在记忆的程序里外界的事务源源不断的进入，其中一部分则随着时间的更迭，慢慢被遗忘。于是乎一些事情当我回想起来时，早就已经被抛置于九霄云外，再也找不回来。唯一能留住一点这些被遗忘的记忆最好的方式就是在被遗忘前把它们记录下来。登录微博、QQ、微信才突然发现这些应用所能记录的都只是些只言片语，要是稍微大一点就要在一片花花绿绿的背景里使用反人类的工具“生成”一篇文章，所以才有了搭建一个自己博客的想法，作为对过去的记录，对现在的礼物，对未来的帮助。  </p>
+<h2 id="平台选择"><a href="#平台选择" class="headerlink" title="平台选择"></a>平台选择</h2><p><a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html" target="_blank" rel="noopener">写博客的人，会经历三个阶段</a></p>
+<ul>
+<li>第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。</li>
+<li>第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。</li>
+<li>第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。    </li>
+</ul>
+<p>本着不折腾不舒服的原则，果断选择了Github+Hexo的方案。<a href="https://github.com/" target="_blank" rel="noopener">Github</a>号称编程界的Facebook。作为世界上最大的同性交友网站，简单说，它是一个具有版本管理功能的代码仓库。Github设计了Pages功能，允许用户自定义项目首页，用来替代默认的源码列表。<a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>是一个基于<a href="https://nodejs.org" target="_blank" rel="noopener">Node.js</a>的静态博客程序，可以方便的生成静态网页托管在github上。作者是来自台湾的<a href="https://zespia.tw/" target="_blank" rel="noopener">tommy351</a>。引用tommy351的话，Hexo 是快速、简单且功能强大的 Node.js 博客框架(A fast, simple &amp; powerful blog framework, powered by Node.js.)。</p>
+<h2 id="Github-Hexo使用"><a href="#Github-Hexo使用" class="headerlink" title="Github+Hexo使用"></a>Github+Hexo使用</h2><p>网上关于GitHub的教程多如牛毛，在Windows上命令行的客户端还是很好用的。Hexo的详细介绍也是一大堆一看就明白是怎么回事。贴上几个备用。  </p>
+<ul>
+<li><a href="https://www.zhihu.com/question/20962496" target="_blank" rel="noopener">如何在 GitHub 上写博客</a></li>
+<li><a href="http://www.jianshu.com/p/858ecf233db9" target="_blank" rel="noopener">通过Hexo在Github上搭建博客教程</a></li>
+<li><a href="http://zipperary.com/2013/05/28/hexo-guide-1/" target="_blank" rel="noopener">hexo系列教程</a></li>
+<li><a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="noopener">hexo你的博客</a></li>
+</ul>
+<h2 id="Hexo主题选择"><a href="#Hexo主题选择" class="headerlink" title="Hexo主题选择"></a>Hexo主题选择</h2><p>作为一个个人博客来说，除了内容以外，我觉得最为重要的是长相（毕竟这是一个看脸的时代）。所以在写完文章后，还要给它来个漂亮的衣服，秀一下气质。<br>网上搜一下<a href="https://www.zhihu.com/question/24422335" target="_blank" rel="noopener">有那些好看的 Hexo 主题？</a>，要求不多，只要显示文章内容就好了啦（最好有社交啦，字体好看点，排版优美点，颜色搭配舒服点，整体大气点，访问速度快一点，动画特效多一点）。于是发现<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">NexT.Mist</a>颜值很高，还有详细的<a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">使用说明</a>。而且拥有响应式布局设计。<br>选好之后生成博客，接下来就是见证<del>奇迹</del>改造的时刻，“颜值再高，也要动刀”，来个微整形，改造下配色，修改下字体大小，换个头像。<br>防止遗忘，贴一下改造文件记录</p>
+<ul>
+<li>修改文件<code>hexo\themes\next\source\css\_schemes\Mist\_header.styl</code></li>
+<li>修改文件<code>hexo\themes\next\source\css\_schemes\Mist\_posts-expanded.styl</code></li>
+<li>修改文件<code>hexo\themes\next\source\css\_schemes\Mist\_menu.styl</code></li>
+<li>修改文件<code>hexo\themes\next\source\css\_common\_section\sidebar.styl</code></li>
+<li>修改文件<code>hexo\themes\next\source\css\_common\_component\back-to-top.styl</code>   </li>
+</ul>
+<p>大功告成！<br><img src="http://ww1.sinaimg.cn/large/696a9cabgw1ezl8cp6c7tj21e00ukaey.jpg" alt=""></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/01/01/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/01/17/那些年，我听过的歌/" rel="prev" title="那些年，我听过的歌">
+                那些年，我听过的歌 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="浥尘烟雨" />
+          <p class="site-author-name" itemprop="name">浥尘烟雨</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/ycyy" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/1768594603" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/qnsh" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#平台选择"><span class="nav-number">1.</span> <span class="nav-text">平台选择</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Github-Hexo使用"><span class="nav-number">2.</span> <span class="nav-text">Github+Hexo使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo主题选择"><span class="nav-number">3.</span> <span class="nav-text">Hexo主题选择</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">浥尘烟雨</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
